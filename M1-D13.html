@@ -116,12 +116,6 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                  Create a function "changeTaskBackgroundColor" and attach it to the "Change task background" button via JavaScript (not via html attribute)
                  Take the color from the color picker ad apply it as background to every list item
         */
-
-      const changeTaskBackgroundColor = function () {
-        const buttonChangeBG = document.getElementById("colorChange");
-        buttonChangeBG.addEventListener("click", addNumberToResult);
-      };
-
       const addNumberToResult = function (event) {
         let changeBG = document.getElementById("colorPicker").value;
         const Li = document.querySelectorAll("li");
@@ -130,6 +124,13 @@ The user should be able to see the list of tasks, add new ones, delete existing 
           Li[i].style.backgroundColor = changeBG;
         }
       };
+
+      const changeTaskBackgroundColor = function () {
+        const buttonChangeBG = document.getElementById("colorChange");
+        buttonChangeBG.addEventListener("click", addNumberToResult);
+      };
+
+      changeTaskBackgroundColor();
 
       /* ### EXTRA ### */
 
