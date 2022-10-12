@@ -65,12 +65,12 @@ The user should be able to see the list of tasks, add new ones, delete existing 
 
     <script>
       /* EXERCISE 5:
-              Add a new task to the list.
-              Suggestion:
-              - Use document.getElementById" to get the UL item and the input text
-              - Use the document.createElement to create the new List Item
-              - Append the LI child to the UL
-          */
+                Add a new task to the list.
+                Suggestion:
+                - Use document.getElementById" to get the UL item and the input text
+                - Use the document.createElement to create the new List Item
+                - Append the LI child to the UL
+            */
 
       const input = document.getElementById("newTask");
       const ULList = document.getElementById("myTaskList");
@@ -86,8 +86,8 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       };
 
       /* EXERCISE 6:
-              Create a function "removeLast" which removes the last item from the task list
-          */
+                Create a function "removeLast" which removes the last item from the task list
+            */
 
       const removeLast = function () {
         const readyULList = document.querySelectorAll("li");
@@ -95,8 +95,8 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       };
 
       /* EXERCISE 7:
-              Create a function "removeFirst" which removes the first item from the task list
-          */
+                Create a function "removeFirst" which removes the first item from the task list
+            */
 
       const removeFirst = function () {
         const readyULList = document.querySelectorAll("li");
@@ -104,27 +104,32 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       };
 
       /* EXERCISE 8:
-             Create a function "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
-          */
-
+               Create a function "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
+            */
+      const getTasksAsArray = function () {
+        const readyULList = document.querySelectorAll("li");
+        for (let i = 0; i < readyULList.length; i++) {
+          console.log("task", i + 1, ":", readyULList[i].innerText);
+        }
+      };
       /* EXERCISE 9:
-             Create a function "changeTaskBackgroundColor" and attach it to the "Change task background" button via JavaScript (not via html attribute)
-             Take the color from the color picker ad apply it as background to every list item
-    */
+               Create a function "changeTaskBackgroundColor" and attach it to the "Change task background" button via JavaScript (not via html attribute)
+               Take the color from the color picker ad apply it as background to every list item
+      */
 
       /* ### EXTRA ### */
 
       /* EXERCISE 10:
-              Attach an eventListener to each new task you create. When the task receives the click it should be removed (only the clicked task should disappear)
-    */
+                Attach an eventListener to each new task you create. When the task receives the click it should be removed (only the clicked task should disappear)
+      */
 
       /* EXERCISE 11:
-             Create a function "bubbleSort()" which sorts the task list alphabetically using the bubble sort algorithm
-    */
+               Create a function "bubbleSort()" which sorts the task list alphabetically using the bubble sort algorithm
+      */
 
       /* #### Suggestion:
-     - Break the code into many function for semplicity 
-     - Reuse the functions previously created */
+       - Break the code into many function for semplicity
+       - Reuse the functions previously created */
     </script>
   </body>
 </html>
