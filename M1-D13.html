@@ -89,6 +89,11 @@ The user should be able to see the list of tasks, add new ones, delete existing 
               Create a function "removeLast" which removes the last item from the task list
           */
 
+      const removeLast = function () {
+        const readyULList = document.querySelectorAll("li");
+        readyULList[readyULList.length - 1].remove();
+      };
+
       /* EXERCISE 7:
               Create a function "removeFirst" which removes the first item from the task list
           */
